@@ -6,11 +6,11 @@ import Backdrop from '../Backdrop/Backdrop';
 class Modal extends Component {
 
     shouldComponentUpdate(nextProps, nextState){
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     componentDidUpdate(){
-        console.log('[Modal] is rendering');
+        // console.log('[Modal] is rendering');
     }
     render() {
         return (
