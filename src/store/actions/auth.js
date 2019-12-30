@@ -75,7 +75,6 @@ export const auth = (email, password, isSignUp) => {
 export const authCheckState = () => {
     return dispatch => {
         const token = localStorage.getItem('token');
-        console.log(token)
         if(!token) {
             dispatch(authLogout());
         } else {

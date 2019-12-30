@@ -63,8 +63,8 @@ export const fetchOrdersFail = (error) => {
 export const fetchOrders = (token, userId) => {
     return dispatch => {
         dispatch(fetchOrdersStart());
-        let queryParams = '?auth=' + token + '&orderBy="userId"&equalTo"' + userId + '"'
-        axios.get('/order.json?auth=' + token)
+        let queryParams = '?auth=' + token + '&orderBy="userId"&equalTo"' + userId + '"';
+        axios.get('/order.json' + queryParams)
             .then(res => {
                 const fetchedOrders = [];
                 for (let key in res.data) {
